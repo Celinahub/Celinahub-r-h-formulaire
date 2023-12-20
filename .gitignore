@@ -1,0 +1,55 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# Ignorer les fichiers de configuration locaux
+.env
+
+# Ignorer le dossier node_modules (généralement inclus dans les projets Node.js)
+node_modules/
+*.log
+
+# Ignore le fichier de verrouillage des versions généré par npm
+package-lock.json
+
+# Ignore les fichiers d'environnement
+.env
+
+# Ignorer le dossier .vscode/ (spécifique à Visual Studio Code)
+.vscode/
+
+# Ignorer les fichiers de configuration spécifiques à Vercel
+.vercel
+
+# Ignorer les fichiers de configuration spécifiques à Node.js
+node.json
+
+# Ignorer le dossier de modules JavaScript (généralement inclus dans les projets React)
+# Ajoutez cette ligne si votre projet utilise React avec des modules JavaScript
+# public/build/
+
+# Ignorer les fichiers générés par votre serveur ou votre application (dépend du contexte)
+# Ajoutez cette ligne si votre projet génère des fichiers dans le dossier "build" ou "dist"
+# build/
+# dist/

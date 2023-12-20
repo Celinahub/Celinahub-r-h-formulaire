@@ -1,0 +1,808 @@
+/* Commentaire CSS */
+
+/* Sélecteur */
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: Arial, sans-serif;
+   box-sizing: border-box;
+ }
+
+ .custom-navbar {
+   background-color: #444243;
+}
+
+
+ .nav-link-text {
+   color: #F9F4F0;
+ }
+
+ .nav-link-icon {
+   color: #F9F4F0;
+ }
+   
+
+ .navbar-logo {
+   width: 50px; /* Ajustez la largeur de votre logo selon vos besoins */
+   height: auto;
+   margin-right: 10px; /* Ajoutez un espacement entre le logo et le texte */
+}
+ /* ... autres styles de boutons ... */
+
+ .btn-custom {
+    background-color: #444243;
+    border-color: #444243;
+    color: white; /* Couleur du texte en état normal */
+ }
+ 
+ .btn-custom:hover {
+    background-color: #C26C6B;
+    border-color: #C26C6B;
+    color: white; /* Couleur du texte au survol */
+ }
+ 
+ .btn-custom:focus {
+    outline: none; /* Supprime la bordure par défaut au focus */
+ }
+ /* ... autres styles de boutons ... */
+
+ .btn-custom {
+   background-color: #444243;
+   border-color: #444243;
+   color: white; /* Couleur du texte en état normal */
+}
+ 
+ /* Style de l'icône de flèche vers le haut */
+ .scroll-to-top {
+    position: fixed;
+    bottom: 20px; /* Ajustez la position verticale selon vos besoins */
+    right: 20px; /* Ajustez la position horizontale selon vos besoins */
+    font-size: 24px; /* Taille de l'icône */
+    background-color: #444243; /* Couleur de fond */
+    color: #fff; /* Couleur de l'icône (blanc) */
+    width: 50px; /* Largeur du cercle */
+    height: 50px; /* Hauteur du cercle */
+    border-radius: 50%; /* Forme arrondie */
+    transition: background-color 0.3s, transform 0.3s; /* Effets de transition */
+    z-index: 999; /* Assurez-vous que l'icône est au-dessus du contenu */
+    text-align: center; /* Centre le texte horizontalement */
+    line-height: 50px; /* Centre l'icône verticalement */
+ }
+ 
+ /* Au survol, changez la couleur de la flèche (blanche) */
+ .scroll-to-top:hover {
+    background-color: #C26C6B; /* Couleur de fond au survol */
+    color: #fff; /* Couleur de la flèche (blanche) au survol */
+ }
+ 
+ /* Style responsive */
+ @media (max-width: 480px) {
+    .scroll-to-top {
+        font-size: 20px; /* Réduisez la taille de l'icône pour les écrans plus petits */
+        width: 40px; /* Réduisez la largeur du cercle pour les écrans plus petits */
+        height: 40px; /* Réduisez la hauteur du cercle pour les écrans plus petits */
+        line-height: 40px; /* Centre l'icône verticalement pour les écrans plus petits */
+    }
+ }
+ 
+ /* Pour un meilleur espacement entre l'image et le texte */
+ .profile-image {
+    margin-bottom: 20px;
+ }
+ 
+ /* Pour un meilleur espacement entre le texte et le bouton */
+ .profile-text {
+    margin-bottom: 20px;
+ }
+ 
+ :root {
+  --bs-primary: #C26C6B;
+ }
+ 
+ .btn-outline-primary {
+  color: var(--bs-primary); /* Couleur du texte */
+  border-color: var(--bs-primary); /* Couleur de la bordure */
+ }
+ 
+ .btn-outline-primary:hover {
+  background-color: var(--bs-primary); /* Couleur de fond au survol */
+  color: #fff; /* Couleur du texte au survol */
+  outline: none; /* Supprime le contour par défaut */
+  border: 1px solid var(--bs-primary); /* Ajoute un contour personnalisé */
+ }
+ 
+ a.btn.btn-outline-primary:active,
+a.btn.btn-outline-primary:focus,
+a.btn.btn-outline-primary:focus:active {
+    background-color: transparent; /* Fond transparent au clic et au focus */
+    border-color: #685153; /* Remplacez par la couleur de bordure souhaitée */
+    color: #685153; /* Couleur du texte en #685153 au clic et au focus */
+    outline: none; /* Supprimez uniquement l'outline au clic et au focus */
+}
+
+ /* Réduisez la taille de la photo de profil */
+ .profile-image img {
+    max-width: 300px; /* Définissez la largeur maximale souhaitée */
+    max-height: 300px; /* Définissez la hauteur maximale souhaitée */
+    border-radius: 50%; /* Pour garder la forme ronde */
+ }
+ 
+ .profile-image img {
+    max-width: 100%;
+    height: auto; /* Pour conserver les proportions */
+ }
+ 
+ /* Ajoutez ce CSS dans votre feuille de style */
+ .profile-image {
+    position: relative;
+    margin-bottom: 20px; /* Espace sous l'image */
+ }
+ 
+ .bubble-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ 
+ @media (max-width: 480px) {
+    .profile-text {
+        margin-top: 20px; /* Espace au-dessus du texte */
+    }
+ }
+ 
+ /* Styles pour positionner l'icône de bulle sur la photo de profil */
+ .profile-image {
+    position: relative;
+    display: inline-block; /* Pour empêcher le débordement de l'icône de la bulle */
+ }
+ 
+ /* Style de l'icône de bulle */
+ .bubble-icon {
+    position: absolute;
+    top: 20%; /* Position verticale centrée */
+    left: 90%; /* Position horizontale centrée */
+    transform: translate(-50%, -50%);
+    font-size: 2rem; /* Réglez la taille de l'icône en fonction de vos préférences */
+    color: #C26C6B; /* Couleur de l'icône par défaut */
+    z-index: 2; /* Pour que l'icône soit au-dessus de la photo de profil */
+    transition: color 0.3s; /* Ajoutez une transition de couleur */
+ }
+ 
+ /* Au survol, changez la couleur de l'icône (à #685153) */
+ .bubble-icon:hover {
+    color: #685153; /* Couleur de l'icône au survol */
+ }
+ 
+ 
+ /* Styles pour rendre l'icône responsive */
+ @media (max-width: 480px) {
+    .bubble-icon {
+        font-size: 1.5rem; /* Réduisez la taille de l'icône pour les écrans plus petits */
+    }
+ }
+ 
+ /* Styles pour les barres de compétences animées */
+    .progress-bar {
+        transition: width 2s ease-in-out; /* Durée de l'animation et type de transition */
+        background-color: transparent; /* Couleur de fond transparente */
+    }
+ 
+ /* Style pour englober les barres de compétences */
+ 
+ /* Style pour les barres de progression */
+ .progress-bar {
+    border-radius: 5px; /* Coins arrondis pour les barres de progression */
+ }
+ 
+ 
+    /* Pour remplacer la partie non remplie des barres de compétences par du blanc */
+    .progress-bar {
+        background-color: #C26C6B; /* Couleur de la partie remplie */
+    }
+ 
+    /* Spécifiez la couleur de la partie non remplie */
+    .progress {
+        background-color: #fff; /* Couleur de la partie non remplie en blanc */
+    }
+ 
+ 
+ /* Styles pour les titres "Humaines" */
+ h2 {
+    font-size: 18px; /* Taille de police de 18 pixels */
+    font-weight: bold; /* Texte en gras */
+    color: #444243;
+ }
+ 
+ .competence-name {
+    font-size: 16px; /* Taille de police de 18 pixels */
+    font-weight: normal; /* Texte en gras */
+    color: #444243;
+ }
+ 
+ /* Utilisez la police Helvetica pour les titres */
+ h1, h2, h3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+ }
+ 
+    
+    .competences-section h1 {
+    color: #444243; /* Couleur noire pour le titre */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 50px; /* Marge en bas du titre */
+    font-size: 30px; /* Taille de police de 24 pixels */
+ }
+ 
+    
+    .diplomes-section h1 {
+    color: #444243; /* Couleur noire pour le titre */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 50px; /* Marge en bas du titre */
+    font-size: 30px; /* Taille de police de 24 pixels */
+ }
+    
+    
+    .portfolio-section h1 {
+    color: #444243; /* Couleur noire pour le titre */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 50px; /* Marge en bas du titre */
+    font-size: 30px; /* Taille de police de 24 pixels */
+ }
+    
+    .experiences-section h1 {
+    color: #444243; /* Couleur noire pour le titre */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 50px; /* Marge en bas du titre */
+    font-size: 30px; /* Taille de police de 24 pixels */
+ }
+    
+    
+ .loisirs-section h1 {
+    color: #444243; /* Couleur noire pour le titre */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 50px; /* Marge en bas du titre */
+    font-size: 30px; /* Taille de police de 24 pixels */
+ }
+    
+ /* Style spécifique pour les titres "CAP AEPE", "BAC+3 Stylisme / modélisme option textile", et "BAC PRO Artisanat et métiers d'Art" */
+ h3.diplome-title .diplome-title-specific {
+    font-size: 18px; /* Taille de police de 18 pixels */
+    font-weight: bold; /* Texte en gras */
+    color: #C26C6B; /* Couleur spécifique (C26C6B) */
+ }
+ 
+ .diplome-year {
+    font-size: 16px; /* Taille de police plus petite pour l'année, ajustez selon vos besoins */
+    color: #444243; /* Couleur 444243 */
+    font-weight: normal;
+ }
+ 
+ /* Styles pour les boutons + et - */
+ .btn-toggle {
+    background-color: #ffffff;
+    color: #CCBCB4;
+    border: none;
+    cursor: pointer;
+ }
+ 
+ .btn-toggle:hover {
+    background-color: #ffffff;
+ }
+ 
+ /* Styles pour les icônes des boutons + et - */
+ .btn-toggle i {
+    font-size: 18px;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 5px;
+ }
+ 
+ /* Styles pour les titres "Découvrir" avec la flèche */
+ .diplome-title-specific,
+ .experience-title-specific {
+    display: none; /* Cachez le titre spécifique */
+    font-size: 18px;
+    font-weight: bold;
+    color: #C26C6B;
+ }
+ 
+ .diplome-title span,
+ .experience-title span {
+    cursor: pointer;
+    display: inline-block;
+    padding-right: 10px;
+ }
+ 
+ /* Cachez initialement la description */
+ .diplome-description,
+ .experience-description {
+    display: none;
+ }
+ 
+ /* Style spécifique pour les boutons "-" dans la section "Diplômes" */
+ 
+ .diplomes-list {
+    list-style-type: none;
+    padding: 0;
+ }
+ 
+ .diplome-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+ }
+ 
+ .diplome-description {
+    display: none;
+    background-color: #CCBCB4;
+    padding: 10px;
+    border-radius: 5px;
+ }
+ 
+ /* Styles pour les boutons + et - */
+ .btn-toggle {
+    background-color: #ffffff; /* Couleur de fond */
+    color: #CCBCB4; /* Couleur du texte */
+    border: none;
+    cursor: pointer;
+ }
+ 
+ .btn-toggle:hover {
+    background-color: #ffffff; /* Couleur de fond au survol */
+ }
+ 
+ /* Styles pour les icônes des boutons + et - */
+ .btn-toggle i {
+    font-size: 18px; /* Taille de l'icône */
+    vertical-align: middle; /* Alignement vertical de l'icône */
+    margin-left: 5px; /* Marge à gauche de l'icône */
+    margin-right: 5px; /* Marge à droite de l'icône */
+ }
+    
+ .sr-only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   padding: 0;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   border: 0;
+   opacity: 0;
+   transition: opacity 0.3s ease; /* Ajout d'une transition pour lisser le changement d'opacité */
+}
+
+.button-text-visible .sr-only {
+   opacity: 1;
+   clip: auto;
+}
+
+
+
+ /* Ajoutez ce CSS pour maintenir les images carrées */
+ .portfolio-image {
+   padding: 10px;
+   text-align: center;
+}
+
+/* Supprimez la règle qui affecte toutes les images sous .portfolio-image */
+.portfolio-image img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 5px;
+   margin-bottom: 20px;
+}
+
+/* Nouvelle classe pour les images animées avec une taille fixe */
+
+/* CSS pour ajuster la mise en page sur les écrans plus petits */
+@media (max-width: 767px) {
+    .portfolio-item {
+        text-align: center;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Styles pour le conteneur de l'image avec le bouton Suivant */
+
+#image-to-replace4,
+#image-to-replace3,
+#image-to-replace2,
+#image-to-replace1 {
+    width: 100%; /* Force la largeur à 100% pour garder la même dimension que les autres images */
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Styles pour les boutons */
+.portfolio-item {
+    position: relative;
+}
+
+
+.next-button,
+.next-button-2,
+.next-button-3 {
+    position: absolute;
+    bottom: -2%; /* Ajustez la position verticale en pourcentage selon vos besoins */
+    left: 1%; /* Centrez horizontalement le bouton */
+    background-color: transparent;
+    border: none;
+    color: #C26C6B;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;/* Réduisez la marge en bas pour rapprocher les boutons des images */
+}
+ 
+ /* Définissez la couleur de l'icône dans l'état par défaut */
+.next-button-1 i,
+.next-button-2 i,
+.next-button-3 i {
+    color: #C26C6B;
+}
+
+/* Définissez la couleur de l'icône dans l'état au survol */
+.next-button-1:hover i,
+.next-button-2:hover i,
+.next-button-3:hover i {
+    color: #C26C6B;
+}
+
+/* Styles pour le bouton 4 */
+.next-button-4 {
+   position: absolute;
+   background-color: transparent;
+   border: none;
+   color: #C26C6B;
+   font-size: 16px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   margin-bottom: -26px; /* Réduisez la marge en bas pour rapprocher le bouton de l'image */
+
+}
+
+
+ 
+ /* Styles pour le texte */
+ .next-button span {
+    margin-left: 10px; /* Ajustez cette valeur pour contrôler l'espace entre l'icône et le texte */
+    margin-right: 5px;
+ }
+ 
+ /* Ajoutez cette règle pour ajuster la position verticale du texte */
+ .next-button-4 span {
+    margin-top: -24px; /* Ajustez cette valeur pour déplacer le texte vers le haut */
+ }
+ 
+ /* CSS */
+ .timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+ 
+ .experience {
+    display: flex;
+    margin-bottom: 0px;
+ }
+ 
+ .experience-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff; /* Couleur de fond pour chaque élément de la frise */
+    border-left: 2px solid #444243; /* Ligne verticale de la frise */
+ }
+ 
+ .experience-title {
+    font-size: 18px;
+    color: #444243;
+    margin-top: 0;
+ }
+ 
+ .experience-subtitle {
+    font-size: 14px;
+    color: #444243;
+    margin: 0;
+ }
+ 
+ .experience-date {
+    font-size: 14px;
+    color: #444243;
+    margin: 0;
+    margin-bottom: 10px; /* Ajoutez cette ligne pour gérer l'espace sous la date */
+ }
+ 
+ .keywords {
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0; /* Supprimer l'espace entre les mots-clés et le titre */
+ }
+ 
+ .keyword {
+    
+    margin-right: 5px; /* Marge à droite pour séparer les mots-clés */
+    background-color: transparent;
+    color: #444243;
+    padding: 5px;
+    border: 1px solid #444243;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+ }
+ 
+ /* Ajoutez des styles spécifiques pour les écrans plus petits (par exemple, largeur inférieure à 768px) */
+ @media (max-width: 768px) {
+    .keyword {
+        margin-right: 5px; /* Rétablissez la marge à droite */
+        margin-bottom: 5px; /* Conservez la marge en bas */
+    }
+ }
+ 
+ 
+ .experience-icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 23px; /* Ajustez la position de l'icône par rapport à la ligne verticale */
+ }
+ 
+ .experience-icon i {
+    font-size: 20px; /* Ajustez la taille de l'icône */
+ }
+ 
+ 
+ .experience-description {
+    background-color: #CCBCB4; /* Fond coloré de la description d'expérience */
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Gardez la description cachée au chargement de la page */
+ }
+ 
+ /* Styles pour les loisirs */
+ 
+ .loisirs-section h1 {
+    color: #444243;
+    margin-bottom: 20px;
+ }
+ 
+ /* Ajoutez une marge intérieure à la section des loisirs */
+ .loisirs-section {
+    padding-left: 20px; /* Ajoutez une marge de 20px à gauche */
+    padding-right: 20px; /* Ajoutez une marge de 20px à droite */
+    background: linear-gradient(to right, #F9F4F0, #F9F4F0);
+ }
+ 
+ 
+ .loisir-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+ }
+ 
+ .loisir-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+ }
+ 
+ /* Fond uni opaque sur les images */
+ .loisir-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(104, 81, 83, 0.7); /* Fond opaque avec 70% d'opacité */
+    opacity: 0;
+    transition: opacity 0.3s;
+ }
+ 
+ .loisir-image:hover::before {
+    opacity: 1;
+ }
+ 
+ .loisir-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ 
+ .loisir-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+ }
+ 
+ .loisir-image:hover .loisir-overlay {
+    opacity: 1;
+ }
+ 
+ /* Icônes en blanc */
+ .loisir-overlay i {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #fff; /* Couleur des icônes en blanc */
+ }
+ 
+ .loisir-overlay h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+ }
+ 
+ /* Styles pour la disposition responsive */
+ @media (max-width: 768px) {
+    .col-md-4 {
+        width: 100%;
+    }
+ }
+
+   
+
+   #contact {
+      background-color: #F9F4F0;
+      overflow: hidden;
+      padding: 20px;
+  }
+  
+  .contact-content {
+   margin: 0 20px; /* Ajoutez une marge horizontale de 20px à gauche et à droite */
+}
+
+  #contact-info,
+  #liens-sociaux {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: center; /* Ajout de cette ligne pour centrer le contenu verticalement */
+      background-color: #ffffff;
+      color: #444243;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding: 20px;
+      min-height: 150px; /* Ajustez cette valeur selon vos besoins */
+  }
+  
+  .email-icon {
+      width: 40px;
+      height: 40px;
+      background-color: #444243;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      color: #fff;
+  }
+  
+  .email-icon i {
+      font-size: 24px;
+  }
+  
+  .linkedin-icon,
+  .github-icon {
+      background-color: #444243;
+      color: #fff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      text-decoration: none;
+      font-size: 24px;
+      margin-left: 10px;
+      margin-top: -10px;
+      margin-right: 5px;
+  }
+  
+  .linkedin-icon:hover,
+  .github-icon:hover {
+      color: #fff;
+  }
+  
+ 
+  
+  
+  
+  
+
+
+
+  
+  #map {
+      filter: grayscale(100%);
+  }
+  
+  #contact-map {
+      flex: 1;
+      width: 100%;
+  }
+  
+  @media screen and (max-width: 768px) {
+      #contact-info,
+      #liens-sociaux,
+      #contact-map {
+          width: 100%;
+      }
+  }
+  
+ 
+  .custom-footer-section {
+   background-color: #F9F4F0;
+   padding: 20px; /* Ajoutez du rembourrage si nécessaire */
+}
+
+.react-container {
+   position: relative; /* ou 'absolute' selon vos besoins */
+   z-index: 2; /* Assurez-vous qu'il a un z-index supérieur si nécessaire */
+ }
+
+   
+ /* Icônes de marqueurs */
+        
+        /* Icônes de marqueurs en noir et blanc */
+ 
+ /* Désaturation de la carte en noir et blanc */
+ #map {
+   filter: grayscale(100%);
+}
+
+/* Ajustement du formulaire pour qu'il ne dépasse pas de la carte */
+@media (min-width: 992px) {
+   .contact-form {
+       max-height: 500px; /* Ajustez la hauteur maximale selon vos besoins */
+   }
+}
+
+/* Ajoutez de l'espace entre la carte et le formulaire sur les écrans plus petits */
+@media (max-width: 768px) {
+   .col-md-6 {
+       margin-bottom: 20px; /* Ajoute de la marge en bas de la colonne du formulaire */
+   }
+
+   .col-md-6 {
+       margin-bottom: 20px; /* Ajoute de la marge en bas de la colonne de la carte */
+   }
+}
+
+/* Ajustez la largeur du formulaire uniquement pour la section de contact */
+@media (min-width: 768px) {
+   .custom-contact-section .col-md-6,
+   .custom-contact-section .col-md-6 {
+       width: 50%; /* Ajustez la largeur selon vos besoins */
+   }
+}
+
+     
+ 
+      
+
+     
