@@ -5,9 +5,23 @@ import { useForm } from 'react-hook-form';
 function Form() {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    // sendEmail(data);
+  async function onSubmit (data)  {
+    const response = await fetch(`${process.env.REACT_APP_CLIENT_URL}/api/formulaire`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+
+    const responseData = await response.json()
+
+    if (responseData.status === 200) {
+      alert('Formulaire soumis avec succès. Un e-mail a été envoyé.');
+    } else {
+      alert('Erreur lors de la soumission du formulaire');
+    }
+    
   };
 
   return (

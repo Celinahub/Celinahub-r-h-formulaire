@@ -1,51 +1,65 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const nodemailer = require('nodemailer');
-const { useForm } = require('react-hook-form');
-const bcrypt = require('bcrypt');
-require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const email = process.env.EMAIL_USER;
+const pass = process.env.EMAIL_PASSWORD;
+const host = process.env.EMAIL_HOST;
+const port = process.env.EMAIL_PORT;
 
 app.use(express.json());
 app.use(cors());
 app.use(helmet());
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASSWORD,
-  },
-});
-
 app.post('/api/formulaire', async (req, res) => {
-  const { prenom, nom, email, message } = req.body;
 
-  if (!prenom || !nom || !email || !message) {
-    return res.status(400).json({ message: 'Veuillez remplir tous les champs du formulaire' });
-  }
+const body = await req.body;
 
-  const hashedMessage = await bcrypt.hash(message, 10);
+if (!email || !pass || !host || !port) {
+  console.error('One or more required environment variables are not set.');
+} else {
+  const transporter = nodemailer.createTransport({
+    host: host,
+    port: parseInt(port),
+    secure: true,
+    auth: {
+      user: email,
+      pass,
+    },
+    tls: { rejectUnauthorized: false },
+  });
+
+
+  
 
   const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: process.env.DESTINATION_EMAIL,
+    from: email,
+    to: email,
     subject: 'Nouveau message de formulaire',
-    text: `Prénom: ${prenom}\nNom: ${nom}\nE-mail: ${email}\nMessage: ${message}`,
+    text: `Prénom: ${body.prenom}\nNom: ${body.nom}\nE-mail: ${body.email}\nMessage: ${body.message}`,
   };
 
   try {
     await transporter.sendMail(mailOptions);
-    res.json({ message: 'Formulaire soumis avec succès. Un e-mail a été envoyé.' });
+    
+
+    res.json({ 
+      status:200,
+      message: 'Formulaire soumis avec succès. Un e-mail a été envoyé.'
+     });
   } catch (error) {
     console.error('Erreur lors de l\'envoi de l\'e-mail', error);
-    res.status(500).json({ message: 'Erreur lors de la soumission du formulaire' });
+    res.json(error, { 
+      status:500,
+      message: 'Erreur lors de la soumission du formulaire' }
+      );
   }
+}
 });
 
-app.listen(PORT, () => {
-  console.log(`Serveur écoutant sur le port ${PORT}`);
+app.listen(5000, () => {
+  console.log(`Serveur écoutant sur le port ${5000}`);
 });
