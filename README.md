@@ -106,6 +106,8 @@ Celinahub-r-h-formulaire est une application web complète reposant sur une arch
 Pour exécuter ce projet localement, suivez ces étapes :
 
 1. Dans le répertoire du projet, exécutez la commande suivante pour démarrer le serveur de développement React :
+
+npm run start
 Ouvrez http://localhost:3000 pour l’afficher dans votre navigateur.
 
 Vous devez télecharger Node.js et npm installés sur votre machine pour exécuter le projet.
@@ -228,7 +230,7 @@ Le projet est structuré comme suit :
 ### Langages de Programmation
 - HTML5
 - CSS3
-- JavaScript (y compris React)
+- JavaScript
 - Node.js
 
 ### bibliothèque JavaScript pour la construction d'interfaces utilisateur
